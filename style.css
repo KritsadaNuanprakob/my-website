@@ -1,0 +1,189 @@
+/* --- ตั้งค่าพื้นฐาน --- */
+html { scroll-behavior: smooth; }
+body { 
+    font-family: 'Roboto Mono', monospace, 'Inter', 'Segoe UI', sans-serif; 
+    margin: 0; padding: 0; color: #e0e0e0; 
+    background-color: #121212; 
+    background-image: radial-gradient(#2c2c2c 1px, transparent 1px);
+    background-size: 20px 20px;
+    line-height: 1.6; padding-top: 90px; 
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* --- CSS Animation --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.section-title, .project-card, .btn-to-contact, #about {
+    animation: fadeInUp 0.6s ease-out forwards; opacity: 0; 
+}
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.4s; }
+.project-card:nth-child(4) { animation-delay: 0.6s; }
+
+/* --- แถบเมนู Navigation Bar --- */
+nav {
+    position: fixed; top: 0; width: 100%;
+    background-color: rgba(18, 18, 18, 0.95); backdrop-filter: blur(10px);
+    z-index: 1000; border-bottom: 2px solid #e91e63;
+    padding: 1rem 30px; display: flex; 
+    justify-content: space-between; align-items: center;
+    box-sizing: border-box; transition: background-color 0.4s ease;
+}
+.nav-datetime { color: #00ffcc; font-size: 0.9rem; letter-spacing: 1px; font-weight: bold; }
+nav ul { display: flex; align-items: center; list-style: none; margin: 0; padding: 0; gap: 25px; }
+nav a {
+    color: #b2fff0; text-decoration: none; font-size: 1rem; text-transform: uppercase;
+    letter-spacing: 2px; font-weight: bold; padding-bottom: 5px; 
+    border-bottom: 2px solid transparent; transition: all 0.3s ease;
+}
+nav a:hover { color: #00ffcc; text-shadow: 0 0 10px rgba(0, 255, 204, 0.8); border-bottom: 2px solid #00ffcc; }
+
+/* --- ปุ่มสลับธีมแบบสวิตช์ (Toggle Switch) --- */
+.theme-switch {
+    position: relative; display: flex; align-items: center; justify-content: space-between;
+    width: 64px; height: 32px; background-color: #1a1a1a;
+    border-radius: 30px; border: 2px solid #e91e63;
+    padding: 0 6px; cursor: pointer; margin-left: 15px;
+    transition: background-color 0.4s, border-color 0.4s;
+}
+.theme-switch i { font-size: 14px; color: #f1c40f; z-index: 1; } /* สีเหลืองสำหรับไอคอน */
+.theme-switch .slider {
+    position: absolute; top: 2px; left: 2px;
+    width: 24px; height: 24px; background-color: #00ffcc;
+    border-radius: 50%; z-index: 2;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55); /* เอฟเฟกต์เด้งๆ */
+}
+/* สไตล์ปุ่มเมื่ออยู่ใน Light Mode */
+body.light-mode .theme-switch { background-color: #fff; border-color: #00bcd4; }
+body.light-mode .theme-switch .slider {
+    transform: translateX(32px); /* เลื่อนสวิตช์ไปขวา */
+    background-color: #e91e63; /* เปลี่ยนสีเป็นชมพู */
+}
+
+/* --- ส่วนหัวเว็บไซต์ (Header) --- */
+header { 
+    background: radial-gradient(circle, #222 0%, #1a1a1a 100%); 
+    display: flex; flex-direction: column; align-items: center; 
+    justify-content: center; padding: 6rem 1rem; text-align: center; transition: background 0.4s ease;
+}
+.profile-pic { 
+    width: 280px; height: 280px; border-radius: 50%; border: 6px solid #e91e63; 
+    box-shadow: 0 0 30px rgba(233, 30, 99, 0.7); margin-bottom: 2.5rem; 
+    object-fit: cover; transition: transform 0.3s ease; 
+}
+.profile-pic:hover { transform: scale(1.05); }
+header h1 { margin: 0; font-size: 2.8rem; color: #fff; text-transform: uppercase; letter-spacing: 2px; }
+header p { font-size: 1.3rem; color: #fff; margin-top: 10px; font-weight: bold; }
+
+/* --- ส่วนโครงสร้างเนื้อหา --- */
+.container { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
+.section-title { 
+    border-bottom: 3px solid #00bcd4; padding-bottom: 0.5rem; 
+    margin-bottom: 2rem; margin-top: 3rem; color: #fff; 
+    text-transform: uppercase; font-size: 1.8rem; letter-spacing: 1px; 
+}
+
+/* --- ทักษะความสามารถ --- */
+.skills-list { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; padding: 0; }
+.skills-list li { 
+    background-color: #1a1a1a; padding: 10px 20px; border-radius: 12px; 
+    font-size: 1rem; color: #fff; border: 1px solid #333; transition: all 0.3s; 
+}
+.skills-list li:hover { transform: scale(1.05); background-color: #00bcd4; color: #000; }
+
+/* --- การ์ดผลงาน --- */
+.project-card { 
+    background: #1a1a1a; padding: 2rem; border-radius: 12px; 
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5); margin-bottom: 2rem; 
+    border-left: 5px solid #e91e63; transition: all 0.3s; 
+}
+.project-card:hover { transform: translateY(-5px); box-shadow: 0 15px 25px rgba(0,0,0,0.6); }
+.project-card h3 { margin-top: 0; color: #00bcd4; font-size: 1.5rem; }
+.project-card p { color: #ccc; }
+.project-card ul { color: #ccc; margin-top: 10px; padding-left: 20px; }
+.project-card ul li { margin-bottom: 8px; }
+
+/* --- ปุ่มกดต่างๆ --- */
+.btn-to-contact {
+    display: inline-block; margin-top: 3rem; padding: 15px 40px;
+    background-color: #e91e63; color: #fff; font-size: 1.3rem; border-radius: 40px;
+    text-transform: uppercase; text-decoration: none; box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4);
+    transition: all 0.3s; font-weight: bold;
+}
+.btn-to-contact:hover { background-color: #00bcd4; color: #000; box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4); transform: translateY(-3px); }
+
+.btn-download {
+    display: inline-block; margin-top: 1.5rem; padding: 12px 25px;
+    background-color: transparent; color: #00ffcc; font-size: 1.1rem;
+    border-radius: 30px; text-transform: uppercase; text-decoration: none;
+    border: 2px solid #00ffcc; transition: all 0.3s; font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+}
+.btn-download:hover { background-color: #00ffcc; color: #121212; box-shadow: 0 0 20px rgba(0, 255, 204, 0.8); transform: translateY(-3px); }
+.btn-download i { margin-right: 8px; }
+
+footer { text-align: center; padding: 3rem; background-color: #1a1a1a; color: #999; margin-top: 4rem; border-top: 1px solid #333; transition: background 0.4s; }
+
+/* ========================================= */
+/* --- ธีมสว่าง (Light Mode) เพิ่มความโดดเด่น --- */
+/* ========================================= */
+body.light-mode { 
+    background-color: #f0f2f5; 
+    color: #222; /* เปลี่ยนจากเทาเป็นเกือบดำให้อ่านง่าย */
+    font-weight: 500; /* เพิ่มความหนาให้ตัวอักษรปกติ */
+    background-image: radial-gradient(#ccc 1px, transparent 1px); 
+}
+body.light-mode nav { 
+    background-color: rgba(255, 255, 255, 0.95); 
+    border-bottom: 2px solid #00bcd4; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* เพิ่มเงาให้เมนูลอยขึ้นมา */
+}
+body.light-mode .nav-datetime { color: #d81b60; font-weight: 900; }
+body.light-mode nav a { color: #444; font-weight: 800; }
+body.light-mode nav a:hover { color: #0097a7; border-bottom: 3px solid #0097a7; }
+
+body.light-mode header { background: radial-gradient(circle, #e9ecef 0%, #fff 100%); }
+body.light-mode header h1 { 
+    color: #111; 
+    font-weight: 900; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* เงาบางๆ ให้ชื่อเด่นออกมา */
+}
+body.light-mode header p { color: #008ba3; font-weight: bold; }
+
+body.light-mode .section-title { 
+    color: #111; font-weight: 900; border-bottom: 4px solid #00bcd4; 
+}
+
+body.light-mode .skills-list li { 
+    background-color: #fff; color: #222; 
+    border: 2px solid #e0e0e0; font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+body.light-mode .skills-list li:hover { background-color: #00bcd4; color: #fff; border-color: #00bcd4; }
+
+body.light-mode .project-card { 
+    background: #fff; 
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08); /* เพิ่มเงาการ์ดให้ลอยขึ้นอ่านง่าย */
+    border-left: 6px solid #00bcd4; 
+}
+body.light-mode .project-card h3 { color: #d81b60; font-weight: 900; } 
+body.light-mode .project-card p, body.light-mode .project-card ul { color: #333; font-weight: 500; }
+
+body.light-mode footer { background-color: #fff; color: #555; border-top: 2px solid #ddd; font-weight: bold; }
+body.light-mode .btn-download { color: #0097a7; border: 2px solid #0097a7; box-shadow: none; font-weight: 800; }
+body.light-mode .btn-download:hover { background-color: #0097a7; color: #fff; }
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    nav { flex-direction: column; padding: 1rem; gap: 10px; }
+    nav ul { flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .nav-datetime { margin-bottom: 5px; }
+    body { padding-top: 130px; }
+    header { padding: 3rem 1rem; }
+    .profile-pic { width: 180px; height: 180px; border-width: 4px; } 
+    header h1 { font-size: 2rem; }
+    .section-title { font-size: 1.5rem; }
+    .project-card h3 { font-size: 1.3rem; }
+}
