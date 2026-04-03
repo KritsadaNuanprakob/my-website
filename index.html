@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kritsada Nuanprakob | Web Dev Portfolio</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-datetime" id="clock">Loading Time...</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            
+            <li>
+                <button class="theme-switch" id="theme-btn" title="Toggle Light/Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun"></i>
+                    <div class="slider"></div>
+                </button>
+            </li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <img src="profile.JPG" alt="Kritsada Nuanprakob" class="profile-pic">
+        <h1>Kritsada Nuanprakob</h1>
+        <p>Web Developer & Business Information Systems</p>
+    </header>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <p>สวัสดีครับ ผมกฤษฎา นวลประกอบ ปัจจุบันกำลังศึกษาอยู่ชั้นปีที่ 3 สาขาระบบสารสนเทศทางธุรกิจ (Business Information Systems) มหาวิทยาลัยสงขลานครินทร์ วิทยาเขตหาดใหญ่</p>
+            <p>เว็บไซต์นี้ถูกพัฒนาขึ้นเพื่อเป็น Portfolio ส่วนตัวสำหรับรวบรวมผลงาน โปรเจกต์ และทักษะทางเทคโนโลยีที่ผมได้ลงมือทำจริง ทั้งในด้าน Full-Stack Web Development, Cloud Database Infrastructure และ Data Analysis โดยมีเป้าหมายเพื่อนำเสนอศักยภาพและความพร้อมสำหรับการฝึกงาน รวมถึงการประยุกต์ใช้ความรู้เพื่อแก้ปัญหาในการทำงานจริงครับ</p>
+            <a href="Kritsada_Resume.pdf" download class="btn-download">
+                <i class="fa-solid fa-file-pdf"></i> Download Resume
+            </a>
+        </section>
+
+        <section id="skills">
+            <h2 class="section-title">Technical Skills</h2>
+            <ul class="skills-list">
+                <li><i class="fa-brands fa-php"></i> PHP & MySQL</li>
+                <li><i class="fa-brands fa-kotlin"></i> Kotlin</li>
+                <li><i class="fa-brands fa-html5"></i> HTML / <i class="fa-brands fa-css3-alt"></i> CSS / <i class="fa-brands fa-js"></i> JavaScript</li>
+                <li><i class="fa-brands fa-microsoft"></i> Microsoft Azure & Cloud</li>
+                <li><i class="fa-solid fa-database"></i> NoSQL (CouchDB)</li>
+                <li><i class="fa-solid fa-chart-column"></i> Power BI & Data Analysis</li>
+                <li><i class="fa-solid fa-pen-nib"></i> UX/UI Design</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-card">
+                <h3>Tattoo Booking Web Application</h3>
+                <p>พัฒนาระบบจองคิวร้านสักแบบ Full Stack ด้วย PHP และ MySQL โดยรับผิดชอบหลักในส่วนของการทดสอบระบบ (System Testing) และปรับปรุงประสบการณ์ผู้ใช้ (UX) ให้ลื่นไหล</p>
+            </div>
+            <div class="project-card">
+                <h3>Cloud Database Infrastructure</h3>
+                <p>ออกแบบและติดตั้งโครงสร้างฐานข้อมูล NoSQL บนระบบ Cloud โดยใช้ Azure Virtual Machine, Bitnami และ CouchDB พร้อมทั้งตั้งค่า Inbound Port Rules เพื่อความปลอดภัย</p>
+            </div>
+            <div class="project-card">
+                <h3>Retail Sales Data Analysis</h3>
+                <p>วิเคราะห์ชุดข้อมูลยอดขายค้าปลีกและสร้าง Dashboard ผ่าน Power BI เพื่อสรุปผลมิติต่างๆ เช่น ข้อมูลประชากรศาสตร์ ผลกำไร และแนวโน้มตามช่วงเวลา</p>
+            </div>
+        </section>
+
+        <section id="activities">
+            <h2 class="section-title">Activities & Experience</h2>
+            <div class="project-card">
+                <h3>Administrative & Document Management</h3>
+                <ul>
+                    <li>ดำเนินการจัดการเอกสารสำนักงานและรวบรวมข้อมูลอย่างเป็นระบบ</li>
+                    <li>ใช้โปรแกรม Microsoft Word และ Excel ระดับสูง (เช่น VLOOKUP, SUMIFS) ในการจัดการข้อมูล</li>
+                    <li>สะสมชั่วโมงการทำงานจริงมากกว่า 100 ชั่วโมง (ธันวาคม 2025 - มีนาคม 2026)</li>
+                </ul>
+            </div>
+            <div class="project-card">
+                <h3>Smart Bin Project Presentation</h3>
+                <p>ร่วมพัฒนาและนำเสนอโครงการ "ถังขยะอัจฉริยะ" โดยมุ่งเน้นที่การวิเคราะห์ Pain Points และนำเสนอโซลูชันการตรวจสอบขยะแบบ Real-time เพื่อเพิ่มประสิทธิภาพในการจัดเก็บให้แก่องค์กร</p>
+            </div>
+            <div class="project-card">
+                <h3>Shoe Laundry Business Simulation</h3>
+                <p>จำลองการวางแผนธุรกิจบริการซักรองเท้าแบบครบวงจร ครอบคลุมตั้งแต่การวางแผนจัดซื้อวัสดุอุปกรณ์ ออกแบบ Layout ร้านค้า และการวิเคราะห์งบกำไรขาดทุน (P&L) เพื่อประเมินความเป็นไปได้ของธุรกิจ</p>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="contact.html" class="btn-to-contact">Let's Connect <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Kritsada Nuanprakob. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
